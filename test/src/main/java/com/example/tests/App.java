@@ -14,9 +14,9 @@ public class App {
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
 		System.setProperty("webdriver.chrome.driver",
-				   
-				
-		driver = new ChromeDriver();
+		   "Test/test/src/main/java/testing/test/drivers/chromedriver.exe");
+		   
+	        driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
