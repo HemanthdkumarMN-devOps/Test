@@ -12,11 +12,26 @@ public class App {
     private WebDriver driver;
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
-        System.setProperty("webdriver.chrome.driver",
-                "/usr/bin/chromedriver");
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    }
+        System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
+        ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--headless");
+                chromeOptions.addArguments("--no-sandbox");
+ 
+                WebDriver driver = new ChromeDriver(chromeOptions);
+ 
+                driver.get("https://google.com");
+ 
+                Thread.sleep(1000);
+ 
+                if (driver.getPageSource().contains("I'm Feeling Lucky")) {
+                        System.out.println("Pass");
+                } else {
+                        System.out.println("Fail");
+                }
+                driver.quit();
+        }
+}
+   
 
     @Test(priority = 1)
     public void login() throws Exception {
