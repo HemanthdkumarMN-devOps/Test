@@ -18,7 +18,8 @@ public class App {
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver","//usr//bin//chromedriver");
-        chromeOptions.addArguments("--no-sandbox");
+        options.addArguments("headless");
+        options.addArguments("disable-gpu");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
