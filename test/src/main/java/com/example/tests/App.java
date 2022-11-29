@@ -14,10 +14,8 @@ public class App {
 	private WebDriver driver;
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
-		System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-		ChromeOptions options = new ChromeOptions();
-                options.addArgument("headless");
-                ChromeDriver driver = new ChromeDriver(options);
+		System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver(options);
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
