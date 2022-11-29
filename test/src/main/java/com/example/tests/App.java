@@ -9,18 +9,16 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 @Test
-public void OpenBrowser()  {
-        WebDriver driver;
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
-        options.addArguments("disable-gpu");
-        driver = new ChromeDriver(options);
-        driver.get("https://www.google.com");
-        System.out.println("Title of the page is: " + driver.getTitle());
-        Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Google"));
-    }
 
+public class App {
+	private WebDriver driver;
+	@BeforeClass(alwaysRun = true)
+	public void setUp() throws Exception {
+		System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
+		driver = new ChromeDriver();
+		options.addArguments("headless");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	}
 
  
 
