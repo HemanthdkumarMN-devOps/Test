@@ -16,7 +16,6 @@ public class App {
 	public void setUp() throws Exception {
 		System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
 		driver = new ChromeDriver();
-		options.addArguments("headless");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
