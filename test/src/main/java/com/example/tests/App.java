@@ -1,35 +1,31 @@
 package com.example.tests;
 
+
+
 import java.time.Duration;
+
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
 @Test
 public class App {
     private WebDriver driver;
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
-        System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-        
-                chromeOptions.addArguments("--headless");
-                chromeOptions.addArguments("--no-sandbox");
- 
-                WebDriver driver = new ChromeDriver(chromeOptions);
- 
-                driver.get("https://google.com");
- 
-                Thread.sleep(1000);
- 
-                
-                driver.quit();
-        }
-}
-   
+        System.setProperty("webdriver.chrome.driver",
+                "//usr//bin//chromedriver");
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    }
 
-    @Test(priority = 1)
+
+
+   @Test(priority = 1)
     public void login() throws Exception {
           driver.get("https://immutly-dev.netlify.app/");
             driver.findElement(By.id("login-button")).click();
@@ -51,6 +47,8 @@ public class App {
             
     }
 
-    
+
+
+   
         
     }
