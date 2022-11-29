@@ -13,7 +13,7 @@ public class App {
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-        ChromeOptions chromeOptions = new ChromeOptions();
+        
                 chromeOptions.addArguments("--headless");
                 chromeOptions.addArguments("--no-sandbox");
  
@@ -23,11 +23,7 @@ public class App {
  
                 Thread.sleep(1000);
  
-                if (driver.getPageSource().contains("I'm Feeling Lucky")) {
-                        System.out.println("Pass");
-                } else {
-                        System.out.println("Fail");
-                }
+                
                 driver.quit();
         }
 }
