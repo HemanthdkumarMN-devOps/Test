@@ -15,7 +15,7 @@ public class App {
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
 		System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-		ChromeOptions options = new ChromeOptions()
+		ChromeOptions options = new ChromeOptions();
                 options.addArgument("headless");
                 ChromeDriver driver = new ChromeDriver(options);
 		driver = new ChromeDriver();
