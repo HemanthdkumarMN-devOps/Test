@@ -17,6 +17,11 @@ public class App {
 		System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
 		driver = new ChromeDriver();
 		options.addArguments("headless");
+		options.addArguments("disable-gpu");
+                driver = new ChromeDriver(options);
+                driver.get("https://www.google.com");
+                System.out.println("Title of the page is: " + driver.getTitle());
+                Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Google"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
