@@ -19,6 +19,7 @@ public class App {
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver",
                 "//usr//bin//chromedriver");
+        chromeOptions.addArguments("--no-sandbox");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
