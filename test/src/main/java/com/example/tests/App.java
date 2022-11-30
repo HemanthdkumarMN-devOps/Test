@@ -14,10 +14,10 @@ import org.testng.annotations.Test;
 
 @Test
 public class App {
-    public WebDriver driver;
+    private WebDriver driver;
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
-        System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
+        System.setProperty("webdriver.chrome.driver","/usr/bin/'google-chrome','chromedriver'");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); 
         
