@@ -20,7 +20,7 @@ public class App {
         System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
         ChromeOptions options = new ChromeOptions();
         driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         
     }
 
