@@ -19,7 +19,7 @@ public class App {
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
        
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/ChromeDriver");
         System.setProperty("webdriver.chrome.whitelistedIps", "65.2.92.110");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized"); // open Browser in maximized mode
