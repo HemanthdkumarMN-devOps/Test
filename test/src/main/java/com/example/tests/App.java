@@ -14,12 +14,12 @@ import org.testng.annotations.Test;
 
 @Test
 public class App {
-    private WebDriver driver;
+    public WebDriver driver;
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
         driver = new ChromeDriver();
-        WebDriver remoteWebDriver = RemoteWebDriver.builder().oneOf(caps).address(gridUrl).config(config).build(); 
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); 
         
     }
 
