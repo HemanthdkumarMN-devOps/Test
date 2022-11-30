@@ -22,6 +22,7 @@ public class App {
     public void doSetup() {
         System.setProperty("webdriver.chrome.driver",
                 "/opt/chromedriver");
+        System.setProperty("webdriver.chrome.whitelistedIps", "65.2.92.110");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized"); // open Browser in maximized mode
         options.addArguments("disable-infobars"); // disabling infobars
