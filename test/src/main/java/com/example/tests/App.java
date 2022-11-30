@@ -42,8 +42,23 @@ public class App {
 
    }
 
+@Test(priority = 2)
+    public void buyNFT() {
+
+
+
+       driver.findElement(By.xpath("/html/body/div/div/div[3]/div[2]/div/div/div[5]/div/div/div[1]/img")).click();
+        driver.findElement(By.id("nftpage-buynow")).click();
+        driver.findElement(By.id("buynftmodal-confirm")).click();
+
+
+
+   }
+
 
 
 }
+
+
 
 
