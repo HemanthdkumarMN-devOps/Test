@@ -18,7 +18,6 @@ public class App {
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
-        ChromeOptions options = new ChromeOptions();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         
