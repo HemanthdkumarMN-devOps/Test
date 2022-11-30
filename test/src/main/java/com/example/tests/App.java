@@ -28,7 +28,7 @@ public class App {
         options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
         options.addArguments("--no-sandbox"); // Bypass OS security model
         WebDriver driver = new ChromeDriver(options);
-        
+        driver.get("https://immutly-dev.netlify.app/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); 
         
     }
