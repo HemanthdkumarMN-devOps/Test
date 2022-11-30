@@ -23,16 +23,17 @@ public class App {
 
    @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
-            System.setProperty("webdriver.chrome.driver", "/usr/bin/ChromeDriver");
-            System.setProperty("webdriver.chrome.whitelistedIps", "65.2.92.110");
-            ChromeOptions options = new ChromeOptions();
+        System.setProperty("webdriver.chrome.driver",
+                "/usr/bin/ChromeDriver");
+          ChromeOptions options = new ChromeOptions();
             options.addArguments("start-maximized"); // open Browser in maximized mode
             options.addArguments("disable-infobars"); // disabling infobars
             options.addArguments("--disable-extensions"); // disabling extensions
             options.addArguments("--disable-gpu"); // applicable to windows os only
             options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
             options.addArguments("--no-sandbox"); // Bypass OS security model
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
 
