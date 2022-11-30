@@ -21,7 +21,7 @@ public class App {
    @Test(priority = 1)
     public void doSetup() {
         System.setProperty("webdriver.chrome.driver",
-                "/opt/chromedriver");
+                "/usr/bin/chromedriver");
         System.setProperty("webdriver.chrome.whitelistedIps", "65.2.92.110");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized"); // open Browser in maximized mode
