@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 public class App {
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver",
-           "/usr/bin/chromedriver");     
+           "/usr/local/bin/chromedriver");     
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         options.addArguments("--window-size=1920x1080");
