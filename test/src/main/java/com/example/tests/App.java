@@ -17,7 +17,7 @@ public class App {
     private WebDriver driver;
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
-        System.setProperty("webdriver.chrome.driver","//usr//bin//chromedriver");
+        System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome ");
         options.addArguments("headless");
         options.addArguments("disable-gpu");
         driver = new ChromeDriver();
