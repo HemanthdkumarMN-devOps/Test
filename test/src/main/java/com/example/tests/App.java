@@ -20,7 +20,8 @@ public class App {
 
    @Test(priority = 1)
     public void doSetup() {
-        System.setProperty("webdriver.chrome.driver","/usr/bin/ChromeDriver");
+        System.setProperty("webdriver.chrome.driver",
+                "E:\\QA TESTING\\workspace\\test\\src\\main\\java\\testing\\test\\drivers\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized"); // open Browser in maximized mode
         options.addArguments("disable-infobars"); // disabling infobars
