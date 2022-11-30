@@ -19,7 +19,9 @@ public class App {
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        ClientConfig config = ClientConfig.defaultConfig().connectionTimeout(Duration.ofMinutes(20)).readTimeout(Duration.ofMinutes(20)); // I change this 3 minute(Default) to 20 minutes.
+
+        WebDriver remoteWebDriver = RemoteWebDriver.builder().oneOf(caps).address(gridUrl).config(config).build(); // now you can use this remoteWebDriver.
         
     }
 
