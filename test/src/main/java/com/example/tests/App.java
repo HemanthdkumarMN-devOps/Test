@@ -14,22 +14,16 @@ import org.testng.annotations.Test;
 
 
 
+@Test(priority = 1)
 public class App {
-
-
-
-   @Test(priority = 1)
-    public void doSetup() {
+    public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver",
-                "/usr/bin/chromedriver");
-        System.setProperty("webdriver.chrome.whitelistedIps", "65.2.92.110");
+           "/usr/bin/chromedriver");     
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("start-maximized"); // open Browser in maximized mode
-        options.addArguments("disable-infobars"); // disabling infobars
-        options.addArguments("--disable-extensions"); // disabling extensions
-        options.addArguments("--disable-gpu"); // applicable to windows os only
-        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-        options.addArguments("--no-sandbox"); // Bypass OS security model
+        options.addArguments("--headless");
+        options.addArguments("--window-size=1920x1080");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-gpu");
         WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
