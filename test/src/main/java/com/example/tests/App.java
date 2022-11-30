@@ -17,8 +17,8 @@ public class App {
     private WebDriver driver;
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
-        System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome ");
-        driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
+        
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized"); // open Browser in maximized mode
         options.addArguments("disable-infobars"); // disabling infobars
@@ -28,7 +28,7 @@ public class App {
         options.addArguments("--no-sandbox"); // Bypass OS security model
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://google.com");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        
     }
 
 
