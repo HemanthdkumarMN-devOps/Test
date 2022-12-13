@@ -57,7 +57,7 @@ public class App {
 
         driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div[1]/div[2]/div/span/div")).click();
 
-                       driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[1]/div/div[1]/div/input")).sendKeys("Test/test/test-output/passed.png");
+                       driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[1]/div/div[1]/div/input")).sendKeys("test/test-output/passed.png");
             driver.findElement(By.id("createnft-title-field")).click();
             driver.findElement(By.id("createnft-title-field")).click();
             driver.findElement(By.id("createnft-title-field")).clear();
