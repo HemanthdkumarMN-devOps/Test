@@ -56,7 +56,7 @@ public class App {
 		    driver.findElement(By.id("createnft-title-field")).click();
 		    driver.findElement(By.id("createnft-title-field")).click();
 		    driver.findElement(By.id("createnft-title-field")).clear();
-		    driver.findElement(By.id("createnft-title-field")).sendKeys("test Jenkins");
+		    driver.findElement(By.id("createnft-title-field")).sendKeys("New Auto test");
 		    driver.findElement(By.id("createnft-description-field")).click();
 		    driver.findElement(By.id("createnft-description-field")).clear();
 		    driver.findElement(By.id("createnft-description-field")).sendKeys("test jenkins");
