@@ -48,7 +48,7 @@ public class App {
 		
 	//Create NFT Setup
 		driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div[1]/div[1]/span[3]/a/div")).click();
-		driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[1]/img")).click();
+		driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[2]/div[2]/div[3]/div/div/div[1]/img")).click();
 		
 	// Create NFT Page
 			driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div[1]/div[2]/div/span/div")).click();
