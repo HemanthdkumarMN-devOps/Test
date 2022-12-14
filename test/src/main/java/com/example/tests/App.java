@@ -35,7 +35,7 @@ public class App {
 		driver.findElement(By.id("nftpage-buynow")).click();
 		driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div/div/div[3]/div[2]/button[1]")).click();
 
-	list
+	//list
 		driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[5]/div/div/table/tbody/tr[1]/td[5]/button")).click();
 		driver.findElement(By.id("nftpage-list-nft")).click();
 		driver.findElement(By.xpath("//div[@id='root']/div/div/div[3]/div/div/div/div/div/div[2]/div[2]/span[2]"))
@@ -46,7 +46,7 @@ public class App {
 		driver.findElement(By.id("list-public-price")).sendKeys("1000");
 		driver.findElement(By.id("listnftmodal-submit")).click();
 		
-	Create NFT Setup
+	//Create NFT Setup
 		driver.findElement(By.id("nav-discover")).click();
 		driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[1]/img")).click();
 		
