@@ -32,27 +32,27 @@ public class App {
 
 	// BuyNFT
 		driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[1]/img")).click();
-//		driver.findElement(By.id("nftpage-buynow")).click();
-//		driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div/div/div[3]/div[2]/button[1]")).click();
+		driver.findElement(By.id("nftpage-buynow")).click();
+		driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div/div/div[3]/div[2]/button[1]")).click();
 
-	//list
-// 		driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[5]/div/div/table/tbody/tr[1]/td[5]/button")).click();
-// 		driver.findElement(By.id("nftpage-list-nft")).click();
-// 		driver.findElement(By.xpath("//div[@id='root']/div/div/div[3]/div/div/div/div/div/div[2]/div[2]/span[2]"))
-// 				.click();
-// 		driver.findElement(By.id("list-public-price")).click();
-// 		driver.findElement(By.id("list-public-price")).click();
-// 		driver.findElement(By.id("list-public-price")).clear();
-// 		driver.findElement(By.id("list-public-price")).sendKeys("1000");
-// 		driver.findElement(By.id("listnftmodal-submit")).click();
+	list
+		driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[5]/div/div/table/tbody/tr[1]/td[5]/button")).click();
+		driver.findElement(By.id("nftpage-list-nft")).click();
+		driver.findElement(By.xpath("//div[@id='root']/div/div/div[3]/div/div/div/div/div/div[2]/div[2]/span[2]"))
+				.click();
+		driver.findElement(By.id("list-public-price")).click();
+		driver.findElement(By.id("list-public-price")).click();
+		driver.findElement(By.id("list-public-price")).clear();
+		driver.findElement(By.id("list-public-price")).sendKeys("1000");
+		driver.findElement(By.id("listnftmodal-submit")).click();
 		
-	//Create NFT Setup
-	//	driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div[1]/div[1]/span[3]/a/div")).click();
-	//	driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[2]/div[2]/div[3]/div/div/div[1]/img")).click();
+	Create NFT Setup
+		driver.findElement(By.id("nav-discover")).click();
+		driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[1]/img")).click();
 		
 	// Create NFT Page
 			driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div[1]/div[2]/div/span/div")).click();
-		    driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[1]/div/div[1]/div/input")).sendKeys("/var/lib/jenkins/workspace/Qa/test/test-output/jenkins.png");
+		    driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[1]/div/div[1]/div/input")).sendKeys("/var/lib/jenkins/workspace/Qa/test/test-output/passed.png");
 		    driver.findElement(By.id("createnft-title-field")).click();
 		    driver.findElement(By.id("createnft-title-field")).click();
 		    driver.findElement(By.id("createnft-title-field")).clear();
